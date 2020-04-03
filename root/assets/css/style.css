@@ -1,0 +1,462 @@
+@import url("https://fonts.googleapis.com/css?family=Raleway:300,400,500,700,900");
+
+@font-face
+{
+	font-family: "Bondi";
+	src: url("../fonts/Bourbon.otf") format("opentype");
+}
+
+/* Root */
+html,
+body
+{
+  max-width: 100%;
+  overflow-x: hidden;
+  font-family: "Raleway", sans-serif;
+  background: #000;
+}
+
+html
+{
+  font-size: 62.5%;
+  scroll-behavior: smooth;
+}
+
+button:hover
+{
+  transition: transform .2s;
+  transform: scale(1.1);
+}
+
+.modal
+{
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 100;
+  width: 100vw;
+  height: 100vh;
+  background: #000;
+}
+
+.modal.show
+{
+  display: block;
+  transition: 0.5s;
+  opacity: 0.5;
+}
+
+a
+{
+  color: inherit;
+}
+
+a:hover 
+{
+  color: inherit;
+  text-decoration: none;
+}
+
+button:hover
+{
+  cursor: pointer;
+}
+
+/* Header */
+.header
+{
+  z-index: 250;
+}
+
+.head-design
+{
+  color: whitesmoke;
+  background: transparent;
+}
+
+.head-mob-togg,.head-mob-close 
+{
+  font-size: 3rem;
+}
+
+.head-design .head-mob-togg
+{
+  color: white;
+}
+.head-design .head-mob-close
+{
+	color:black;
+}
+
+.head-mob nav
+{
+  height: 100%;
+  width: 20rem;
+  position: fixed;
+  z-index: 200;
+  top: 0;
+  overflow-x: hidden;
+  padding-top: 2.5rem;
+  transition: 0.5s;
+  left: -100%;
+  display: flex;
+  flex-direction: column;
+  padding-left: 1.6rem;
+}
+
+.head-design .head-mob nav
+{
+  background: #FFFFFF;
+	text-align: left;
+}
+.head-li
+{
+  text-transform: uppercase;
+  font-weight: 900;
+  margin-right: 4rem;
+  font-size: 2.4rem;
+  position: relative;
+}
+
+.head-mob .head-li
+{
+ margin-top: 5rem;
+ color: black;
+}
+
+.head-li:hover:before
+{
+  content: "";
+  position: absolute;
+  width: 60%;
+  height: 0.1rem;
+  bottom: -0.5rem;
+  left: 20%;
+  border-bottom: 4px solid #ffff;
+  display: none;
+}
+
+@media only screen and (min-width: 768px)
+{
+  .head-design 
+	{
+    	background:#FFFFFF;
+  	}
+
+  .head-li:hover:before
+	{
+    	display: block;
+	}
+}
+
+
+
+/* Intro */
+
+.intro 
+{
+  display: flex;
+  flex-flow: column;
+  position:relative;
+  padding-bottom: 5rem;
+}
+
+.intro_cont 
+{
+  color: #fff;
+  flex: 1 1 auto;
+  position: relative;
+}
+
+.intro_cont_hdline 
+{
+  text-transform: uppercase;
+  font-size: 7vw;
+  font-weight: 900;
+  line-height: 1.6;
+}
+
+.intro_cont_hdline .fl 
+{
+  font-size: 7.5vw;
+}
+
+.intro_cont_mask-img-container 
+{
+  height: 34rem;
+}
+
+.intro_cont_mask-img-desktop
+{
+  height: 50rem;
+}
+
+.intro_cont_mask-img-mobile
+{
+  width: 40vw;
+  margin: 0 auto;
+}
+
+.intro_cont_dets .join_txt 
+{
+  font-family: "Bondi";
+  font-size: 5rem;
+  line-height: 0.4;
+  margin-top: -4rem;
+}
+
+.intro_cont_dets .us_txt 
+{
+  font-family: "Bondi";
+  font-size: 5rem;
+}
+
+.intro_cont_dets .memesquad_txt
+{
+  font-weight: 900;
+  font-size: 1.5rem;
+  text-align: center;
+  margin-bottom: 1.5rem;
+}
+
+.intro_cont_dets .follow-btn 
+{
+  background: #fdd300;
+  color: #000;
+  font-weight: 900;
+  font-size: 1.5rem;
+  padding: 0.5rem 5rem;
+  border-color: transparent;
+  border-radius: 25px;
+}
+
+.intro_cont_dets .follow-btn.mobile 
+{
+  border-radius: 10px;
+  margin-top: 5rem;
+  margin-bottom: 3rem;
+}
+
+@media only screen and (min-width: 768px) 
+{
+  .intro {
+    display: block;
+    height: auto;
+    position: relative;
+  }
+
+  .intro_cont_hdline 
+	{
+    font-size: 10rem;
+    height: auto;
+    line-height: initial;
+  }
+
+  .intro_cont_hdline .fl 
+	{
+    font-size: 12rem;
+  }
+
+  .intro_cont_dets .memesquad_txt 
+	{
+    font-size: 3rem;
+  }
+
+  .intro_cont_mask-img-container 
+	{
+    height: 50rem;
+  }
+
+  .intro_cont_mask-img-desktop 
+	{
+    position: inherit;
+    height: 70rem;
+  }
+}
+
+@media only screen and (max-height: 567px) 
+{
+  .intro 
+	{
+    height: auto;
+  }
+  
+  .intro_cont_hdline 
+	{
+    height: auto;
+  }
+
+  .intro_cont_dets
+	{
+    padding-bottom: 5rem;
+  }
+  
+}
+
+/* US */
+.us 
+{
+  background: #fff;
+  color: #1d2124;
+  padding-top: 15rem;
+  padding-bottom: 5rem;
+}
+
+.us_hdln 
+{
+  display: flex;
+  padding-top: 2rem;
+  justify-content: space-evenly;
+}
+
+.us_hdln_mask_img 
+{
+  width: 8rem;
+  height: 100%;
+}
+
+.us_hdln_mask_img.flip 
+{
+  -webkit-transform: scaleX(-1);
+  transform: scaleX(-1);
+}
+
+.us_hdln_txt
+{
+  text-transform: uppercase;
+  font-weight: 900;
+  font-size: 2.5rem;
+  text-align: center;
+  margin-bottom: 1rem;
+}
+
+.us_hdln_cont 
+{
+  font-weight: 900;
+  font-size: 1.6rem;
+  text-align: center;
+}
+
+.us_arng
+{
+  display: flex;
+  margin: 2rem 0;
+}
+
+.us_arng:nth-child(2),
+.us_arng:nth-child(4),
+.us_arng:nth-child(6)
+{
+  justify-content:flex-end;
+}
+
+.us_arng img
+{
+  width: 8rem;
+  height: 8rem;
+  margin-right: 1rem;
+}
+
+.us_arng .txt
+{
+  margin-top: 1.5rem;
+}
+
+.us_arng .title
+{
+  font-weight: 900;
+  font-size: 1.8rem;
+}
+
+.us_arng .desc
+{
+  font-weight: 100;
+  max-width: 20rem;
+  font-size: 1.6rem;
+}
+
+@media only screen and (min-width: 576px) 
+{
+  .us_arng:nth-child(2),
+  .us_arng:nth-child(4),
+  .us_arng:nth-child(6){
+    justify-content: inherit;
+  }
+}
+
+@media only screen and (min-width: 768px) 
+{
+  .us_hdln_mask_img {
+    width: 20rem;
+  }
+
+  .us_hdln_txt
+	{
+    font-size: 4rem;
+  }
+}
+
+/* Footer */
+.footer
+{
+  color: #fff;
+}
+
+.nukepirates-logo
+{
+  width: 40rem;
+}
+.footer_logo
+{
+	width: 30rem;
+}
+
+.footer h5
+{
+  font-size: 1.4rem;
+  font-weight: 900;
+  color: #C8C8C8;
+  margin-bottom: 1.5rem;
+}
+
+.footer-memer h5
+{
+  text-transform: none;
+}
+
+.footer ul li
+{
+  margin-bottom: 1.6rem;
+}
+
+.footer ul li a 
+{
+  color: #fff;
+  font-weight: bold;
+  font-size: 1.4rem;
+}
+
+.footer-btn
+{
+  background: #fff;
+  color: #000;
+  font-weight: 600;
+  font-size: 1.5rem;
+  padding: 0.5rem 5rem;
+  border-color: transparent;
+  border-radius: 10px;
+}
+
+.footer-memer img 
+{
+  height: 2rem;
+}
+
+#particles-js
+{
+  background: #000000;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
